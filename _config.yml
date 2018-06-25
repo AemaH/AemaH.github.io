@@ -63,7 +63,7 @@ kramdown:
 gitalk:
   enable: true    #是否开启Gitalk评论
   clientID: f275ad2bb4401c895943                           #生成的clientID
-  clientSecret:716a2445dff8ccc6eeaf8fa9b13d2685c430df5b    #生成的clientSecret
+  clientSecret: 716a2445dff8ccc6eeaf8fa9b13d2685c430df5b    #生成的clientSecret
   repo: aemah.github.io    #仓库名称
   owner: AemaH    #github用户名
   admin: AemaH
