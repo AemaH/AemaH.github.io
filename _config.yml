@@ -68,7 +68,8 @@ gitalk:
   repo: aemah.github.io    #仓库名称
   owner: AemaH    #github用户名
   admin: AemaH
-  id: 'window.location.pathname'
+  #id: 'window.location.pathname'
+  id: decodeURI(location.pathname) 
   distractionFreeMode: true #是否启用类似FB的阴影遮罩
 
 
