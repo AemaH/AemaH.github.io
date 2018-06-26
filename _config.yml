@@ -67,7 +67,7 @@ gitalk:
   clientSecret: 716a2445dff8ccc6eeaf8fa9b13d2685c430df5b    #生成的clientSecret
   repo: aemah.github.io    #仓库名称
   owner: AemaH    #github用户名
-  admin: AemaH
+  admin: "AemaH"
   #id: 'window.location.pathname'
   id: md5(window.location.pathname) 
   distractionFreeMode: true #是否启用类似FB的阴影遮罩
