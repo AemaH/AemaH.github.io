@@ -1,1 +1,17 @@
-用来测试git指令的操作：git push origin master
+用来测试git指令的操作：git push origin master；
+#######################################
+更新其中的文件 就是：
+先：git add 文件名
+然后：git commit -m "描述" 「引号不能少」
+最后 进行提交：git push origin master；
+
+
+若想一次性同步 大量文件 就是：
+先：git statusgit
+来确定变化情况「删除或者增添」
+然后：git add -A
+无论是删减还是增添都加放入缓冲区
+最后：git push
+将其更新到远程库里；
+
+还有个：git pull  origin master
