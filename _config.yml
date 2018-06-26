@@ -69,7 +69,7 @@ gitalk:
   owner: AemaH    #github用户名
   admin: AemaH
   #id: 'window.location.pathname'
-  id: decodeURI(location.pathname) 
+  id: md5(window.location.pathname) 
   distractionFreeMode: true #是否启用类似FB的阴影遮罩
 
 
