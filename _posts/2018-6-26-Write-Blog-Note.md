@@ -24,7 +24,12 @@ tags:                               #标签
 
 
 测试： 关于`￥`的使用:$e=mc^2$
-而关于￥￥的使用:$$e=mc^2$$
+而关于￥￥的使用:$$e=mc^2$$；
+$$ 
+\begin{aligned} \dot{x} &= \sigma(y-x) \\ 
+\dot{y} &= \rho x - y - xz \\ 
+\dot{z} &= -\beta z + xy \end{aligned} 
+$$
 
 
 ```markdown
