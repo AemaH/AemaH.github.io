@@ -1,8 +1,7 @@
 ---
-
 layout:     post                    # 使用的布局（不需要改）
-title:      如何在这里写blog文章               # 标题 
-subtitle:   其实主要就是开头这些YAML #副标题
+title:      如何写blog文章               # 标题 
+subtitle:    #副标题
 date:       2018-06-26              # 时间
 author:     ERAF                      # 作者
 header-img: img/from_.jpg    #这篇文章标题背景图片
