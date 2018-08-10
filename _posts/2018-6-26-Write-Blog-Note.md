@@ -25,7 +25,7 @@ tags:                               #标签
 
 测试： 关于`￥`的使用:$e=mc^2$
 而关于￥￥的使用:$$e=mc^2$$；
-$$ 
+$$
 \begin{aligned} \dot{x} &= \sigma(y-x) \\ 
 \dot{y} &= \rho x - y - xz \\ 
 \dot{z} &= -\beta z + xy \end{aligned} 
@@ -47,3 +47,5 @@ tags:                               #标签
 
 ```
 后面就直接加上那些markdown就好了；
+
+在gitpages里面插入图片是一件麻烦的事情，本地的话 最好还是改掉使用相对地址的毛病，为了本地阅读和同步考虑 这里决定统统换为图床；
