@@ -158,7 +158,7 @@ tags:                               #标签
     >   $$\nabla _{\theta } U( \theta ) \approx \frac{1}{m}\sum\limits ^{m}_{i=0} R( \tau ) \nabla _{\theta } logP( \tau ;\theta ) $$
     >
 
-    如此 我们就得到策略梯度的推导结果；如果直观的理解上面的公式的话，$\nabla _{\theta } logP( \tau ;\theta )$就是轨迹随着参数θ变化最陡的方向，而$R( \tau ) $代指了步长 影响了某轨迹出现的概率；进一步的 由似然函数 损失函数中的log部分可以推导为只包含动作策略的$log\pi_{\theta}(a;s)$ 「转移概率无θ可删去；具体步骤可以参考RL :introduction」，因包含策略的表示，根据需要有着多种方式「具体参考RL:introduction」本文我们仅通过实例来进行说明 所构建出来的损失函数；
+    如此 我们就得到策略梯度的推导结果；如果直观的理解上面的公式的话，$\nabla _{\theta } logP( \tau ;\theta )$ 就是轨迹随着参数θ变化最陡的方向，而 $R( \tau )$ 代指了步长 影响了某轨迹出现的概率；进一步的 由似然函数 损失函数中的log部分可以推导为只包含动作策略的 $log\pi_{\theta}(a;s)$ 「转移概率无θ可删去；具体步骤可以参考RL :introduction」，因包含策略的表示，根据需要有着多种方式「具体参考RL:introduction」本文我们仅通过实例来进行说明 所构建出来的损失函数；
 
     
 
