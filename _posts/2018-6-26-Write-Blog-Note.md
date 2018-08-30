@@ -54,3 +54,12 @@ tags:                               #标签
 ## 关于其中使用 竖杠
 注意 若想在blog里面使用![](https://ws1.sinaimg.cn/large/005A8OOUly1fuqvvo3xvwj302x01l742.jpg)
 只能写作$p(x\|y)$ 虽然本地看会不一样；
+
+$$
+\begin{aligned}
+H(P)&=H(Y|X)\\
+&=\sum_xP(x)H(Y|X=x)\\
+&=-\sum_xP(x)\sum_yP(y|x)log(P(y|x))\\
+&=-\sum_{x,y}P(x)P(y|x)log(P(y|x))\\
+\end{aligned}
+$$
