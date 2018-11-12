@@ -4,7 +4,7 @@ title:      Reinforcement Learning               # 标题
 subtitle:   遇到的一些强化学习面试问题 #副标题
 date:       2018-11-7              # 时间
 author:     ERAF                      # 作者
-header-img: img/spring.jpg    #这篇文章标题背景图片
+header-img: img/spring.png    #这篇文章标题背景图片
 catalog: true                       # 是否归档
 tags:                               #标签
     - 强化学习
