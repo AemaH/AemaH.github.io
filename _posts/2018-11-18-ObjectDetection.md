@@ -1,7 +1,7 @@
 ---
 layout:     post                    # 使用的布局（不需要改）
-title:      DL之RNN               # 标题 
-subtitle:   一些基本知识 #副标题
+title:      DL之目标检测               # 标题 
+subtitle:   关于目标检测的一些笔记 #副标题
 date:       2018-11-14              # 时间
 author:     ERAF                      # 作者
 header-img: img/asuka_1118.jpg   #这篇文章标题背景图片
