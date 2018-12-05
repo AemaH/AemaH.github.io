@@ -158,6 +158,8 @@ collections: List of graph collections keys to add the Variable to. Defaults to 
 >>> tf.constant([1,2],name="c")
 <tf.Tensor 'c_1:0' shape=(2,) dtype=int32>
 ```
+
+
 可以看到 其会直接再创建一个新的变量；那么 `tf.Variable`和`tf.get_variable`会有什么区别呢？
 ```python
 >>> tf.Variable(tf.constant([1,2]),name="a")
@@ -170,6 +172,7 @@ collections: List of graph collections keys to add the Variable to. Defaults to 
 >>> tf.get_variable(name="b",initializer=tf.constant([1,2]))
 ValueError: Variable b already exists, disallowed. Did you mean to set reuse=True or reuse=tf.AUTO_REUSE in VarScope? Originally defined at:
 ```
+
 当tf.Variable 'b:0'这个变量已经存在时候 再次同样命名就会出错 ；因为`tf.get_variable()` 会检查当前命名空间下是否存在同样name的变量，可以方便共享变量。而`tf.Variable` 每次都会新建一个变量。 
 
 为了共享变量需要搭配``tf.variable_scope() ``和其中的reuse属性：
