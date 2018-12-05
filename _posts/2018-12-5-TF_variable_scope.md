@@ -204,7 +204,6 @@ def test(mode):
     w = tf.get_variable(name=mode+"w", shape=[1,2])
     u = tf.get_variable(name="u", shape=[1,2])
     return w, u
-
 with tf.variable_scope("test") as scope:
     w1, u1 = test("mode1")
     #scope.reuse_variables()
@@ -214,7 +213,6 @@ with tf.variable_scope("test") as scope:
 ```python
 # 关于 不复用时候
 ValueError: Variable test/u already exists, disallowed. Did you mean to set reuse=True or reuse=tf.AUTO_REUSE in VarScope? Originally defined at:
-
 # 使用`reuse=True`复用
 ValueError: Variable test/mode1w does not exist, or was not created with tf.get_variable(). Did you mean to set reuse=tf.AUTO_REUSE in VarScope?
 
@@ -316,13 +314,12 @@ v_6.initializer.run()#其中的初始化器初始化
 ```python
 # Create a variable with a random value.
 weights = tf.Variable(tf.random_normal([784, 200], stddev=0.35), name="weights")
-
 # Create another variable with the same value as 'weights'.
 w2 = tf.Variable(weights.initialized_value(), name="w2")
-
 # Create another variable with twice the value of 'weights'
 w_twice = tf.Variable(weights.initialized_value() * 0.2, name="w_twice")
 ```
+
 以上也都是建立在已经在`tf.Variable`里面设置好`initial_value`、或者在`tf.get_variable`里面设置好`initializer`，这样设置好相关的初始化的方法，才能给后面的初始化变量的方法给予机会。
 
 而初始化的设置本身，根据是在`tf.Variable`还是在`tf.get_variable`是有所不一样的，毕竟其中的形参就不同：
@@ -334,7 +331,6 @@ w_twice = tf.Variable(weights.initialized_value() * 0.2, name="w_twice")
 init=tf.ones_initializer()
 tensor_A=init([3])
 #<tf.Tensor 'ones:0' shape=(3,) dtype=float32>
-
 tf.constant_initializer(
     value=0, 
     dtype=dtypes.float32, 
