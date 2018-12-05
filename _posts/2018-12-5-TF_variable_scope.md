@@ -152,6 +152,7 @@ collections: List of graph collections keys to add the Variable to. Defaults to 
 当然也不是绝对的，其实也就是上面所提到的`initializer`和`initial_value`用法的区别，这一点在后面会单独的介绍；
 2. 第二点就是在于主要的区别共享变量；
 众所周知，tensorflow中每个tensor会在graph里面建立一个节点，variable也不例外，而建立的方式 也就是我们这些`tf.constant`、`tf.Variable`等操作，这里其实带来一个问题，如果我们输入了两个完全一样的代码来创造变量会怎么样？
+
 ```python
 >>> tf.constant([1,2],name="c")
 <tf.Tensor 'c:0' shape=(2,) dtype=int32>
