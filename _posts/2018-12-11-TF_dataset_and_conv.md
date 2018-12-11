@@ -93,7 +93,7 @@ def _parse_function(tfrecord_serialized):
 在此之后 就像是上面对于dataset其中情况读取的方式一样，dataset提供一个简单的创建Iterator的方法：通过dataset.make_one_shot_iterator()来创建一个one shot iterator。每次从iterator里取出一个元素，也就是iterator.get_next()，来完成对于其中一个解析后的example的读取，其实这个时候已经不算是example 就是个feature的合集了；「参考上面建立的过程理解」
 然后我们就直接对对于其中的相关东西进行读取和使用，比如用 np.fromstring() 方法就可以获取解析后的 string 数据，数据格式设置成 np.uint8，就得到了图片原始数据的ndarray数组`np.fromstring(iterator.get_next()["data"],np.uint8)`；然后就和正常矩阵化图片一样使用；
 https://docs.google.com/presentation/d/1ftgals7pXNOoNoWe0E9PO27miOpXbHrQIXyBm0YOiyc/edit#slide=id.g30a6f76e4b_0_210
-# 更多的有关dataset的可以见：https://zhuanlan.zhihu.com/p/30751039
+[更多的有关dataset的可以见](https://zhuanlan.zhihu.com/p/30751039)
 
 ## tensorflow里面的conv
 1. conv1d
