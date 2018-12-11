@@ -1,6 +1,6 @@
 ---
 layout:     post                    # 使用的布局（不需要改）
-title:      tensorflow              # 标题 
+title:      Tensorflow              # 标题 
 subtitle:   有关variable和scope的一点用法的笔记 #副标题
 date:       2018-12-05              # 时间
 author:     ERAF                      # 作者

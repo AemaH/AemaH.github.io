@@ -40,7 +40,7 @@ layout: default
                     {% comment %} if page.subtitle {% endcomment %}
                     <h2 class="subheading">{{ page.subtitle }}</h2>
                     {% comment %} endif {% endcomment %}
-                    <span class="meta"> {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %} post almost {{ page.content | number_of_words }} words on {{ page.date | date: "%B %-d, %Y" }}</span>
+                    <span class="meta"> {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %} post almost {{ page.content | strip_html | strip_newlines | remove: " " | size }} words on {{ page.date | date: "%B %-d, %Y" }}</span>
                 </div>
             </div>
         </div>
