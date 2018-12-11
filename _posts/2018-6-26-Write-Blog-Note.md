@@ -63,3 +63,69 @@ H(P)&=H(Y|X)\\
 &=-\sum_{x,y}P(x)P(y|x)log(P(y|x))\\
 \end{aligned}
 $$
+
+
+## 添加统计字数的功能
+[参考网站](https://extingstudio.com/2017/09/jekyll_tutorials/)以及其网站的源码
+主要步骤大致是对于博客中的\_layouts\post.html，找到其中的`<header class="intro-header" >`这样的`header`中添加`{{ page.content | strip_html | strip_newlines | remove: " " | size }}`语句用于统计字数，同样的 添加`{{ page.content | strip_html | strip_newlines | remove: " " | size | divided_by: 350 | plus: 1 }}`来统计大致阅读时间；  
+如下：本博客原先的关于博客header为：
+```html
+<header class="intro-header" >
+    <div class="header-mask"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        {% for tag in page.tags %}
+                        <a class="tag" href="{{ site.baseurl }}/tags/#{{ tag }}" title="{{ tag }}">{{ tag }}</a>
+                        {% endfor %}
+                    </div>
+                    <h1>{{ page.title }}</h1>
+                    {% comment %}
+                        always create a h2 for keeping the margin , Hux
+                    {% endcomment %}
+                    {% comment %} if page.subtitle {% endcomment %}
+                    <h2 class="subheading">{{ page.subtitle }}</h2>
+                    {% comment %} endif {% endcomment %}
+                    <span class="meta"> {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %} Posted by {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %} on {{ page.date | date: "%B %-d, %Y" }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+```
+
+现在变成了
+```html
+<header class="intro-header" >
+    <div class="header-mask"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        {% for tag in page.tags %}
+                        <a class="tag" href="{{ site.baseurl }}/tags/#{{ tag }}" title="{{ tag }}">{{ tag }}</a>
+                        {% endfor %}
+                    </div>
+                    <h1>{{ page.title }}</h1>
+                    {% comment %}
+                        always create a h2 for keeping the margin , Hux
+                    {% endcomment %}
+                    {% comment %} if page.subtitle {% endcomment %}
+                    <h2 class="subheading">{{ page.subtitle }}</h2>
+                    {% comment %} endif {% endcomment %}
+                    <span class="meta"> {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %} post almost {{ page.content | strip_html | strip_newlines | remove: " " | size }} words on {{ page.date | date: "%B %-d, %Y" }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+```
+
+至于显示区别 之前的是：Posted by 作者名 on 月日年；现在变成了：作者名 post almost 字的个数 words on 月日年；
+
+## 在jekyll下使用Latex
+找了一圈才发现写在了自己的知乎里面，可以参考其中第六个问题：https://zhuanlan.zhihu.com/p/34979398
+
