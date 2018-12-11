@@ -2,7 +2,7 @@
 layout:     post                    # 使用的布局（不需要改）
 title:      Tensorflow              # 标题 
 subtitle:   有关dataset和conv的一点用法的笔记 #副标题
-date:       2018-12-05              # 时间
+date:       2018-12-11              # 时间
 author:     ERAF                      # 作者
 header-img: img/shiraishi_2.jpg   #这篇文章标题背景图片
 catalog: true                       # 是否归档
