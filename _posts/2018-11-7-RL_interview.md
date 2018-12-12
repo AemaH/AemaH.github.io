@@ -243,7 +243,7 @@ A3C的全名是Asynchronous Advantage Actor-Critic ，顾名思义 是异步的�
 
 进而是DDPG 和DPG的区别也只是在于：使用DNN来逼近值函数和确定性策略，参考上面的AC架构实现；（如果还是分不太清这里off-policy的概念，参考强化学习精要P284）这里是伪代码图：
 
-![](https://pic4.zhimg.com/80/v2-8fe2d057ef4f4cdfeca525735afe0535_hd.jpg)
+![](https://ws1.sinaimg.cn/large/005A8OOUly1fy320nboohj30k00cydhc.jpg)
 
 就像在DQN中讲的那样，当利用深度神经网络进行函数逼近的时候，强化学习算法常常不稳定。这是因为，对深度神经网络进行训练的时候往往假设输入的数据是独立同分布的，但强化学习的数据是顺序采集的，数据之间存在马尔科夫性，很显然这些数据并非独立同分布的。
 
